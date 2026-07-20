@@ -8,7 +8,7 @@ const highlights = [
   { value: 1, suffix: "+", label: "Years of production experience" },
   { value: 40, suffix: "+", label: "REST API endpoints shipped" },
   { value: 30, suffix: "%", label: "API response time reduction" },
-  { value: 3, suffix: "", label: "Production projects led" },
+  { value: 4, suffix: "", label: "Production projects led" },
 ];
 
 function Stat({
