@@ -6,6 +6,7 @@ import {
 } from "motion/react";
 import type { ReactNode } from "react";
 import { projects } from "../data/portfolio";
+import { ExternalLinkIcon, SparkleIcon } from "./icons";
 import Reveal from "./Reveal";
 import Section from "./Section";
 
@@ -71,9 +72,14 @@ export default function Projects() {
                 </h3>
                 <p className="font-mono text-sm text-muted">{project.period}</p>
               </div>
-              <p className="mt-1 text-sm font-medium text-accent-soft">
-                {project.role}
-              </p>
+              <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                <p className="text-sm font-medium text-accent-soft">{project.role}</p>
+                {project.aiAssisted && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-alt/40 bg-accent-alt/10 px-2.5 py-0.5 font-mono text-[11px] text-accent-alt">
+                    <SparkleIcon /> AI-assisted development (Claude)
+                  </span>
+                )}
+              </div>
 
               <ul className="mt-4 space-y-2">
                 {project.points.map((point) => (
@@ -94,6 +100,24 @@ export default function Projects() {
                   </li>
                 ))}
               </ul>
+
+              {project.links.length > 0 && (
+                <div className="mt-5 flex flex-wrap gap-3">
+                  {project.links.map((link) => (
+                    <motion.a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-accent/40 px-3 py-1.5 text-xs font-semibold text-accent-soft transition-colors hover:bg-accent/10"
+                    >
+                      {link.label} <ExternalLinkIcon />
+                    </motion.a>
+                  ))}
+                </div>
+              )}
             </TiltCard>
           </Reveal>
         ))}

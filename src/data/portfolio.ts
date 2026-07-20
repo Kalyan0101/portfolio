@@ -92,6 +92,40 @@ export const experience = [
 
 export const projects = [
   {
+    name: "Astro Raju Maharaj Ji",
+    subtitle: "Enterprise Spiritual-Services Platform (Monorepo)",
+    period: "July,2026 – Present",
+    role: "Lead Frontend Developer",
+    tech: [
+      "React 19",
+      "Vite",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "TanStack Query",
+      "Zustand",
+      "React Router v7",
+      "Express (BFF)",
+      "Socket.io",
+      "Razorpay",
+      "VideoSDK",
+      "pnpm + Turborepo",
+    ],
+    points: [
+      "Owned the entire frontend across a 5-app pnpm/Turborepo monorepo (Website, Jyotish, Shop, Education, Auth BFF) sharing one design system, API layer, and SSO across subdomains.",
+      "Built Website and Jyotish flows — landing pages, astro tools, astrologer listings, consultations/bookings, and live sessions via VideoSDK.",
+      "Built Shop e-commerce flows — product details with pooja/energization add-ons, cart, wishlist, and Razorpay checkout — on TanStack Query and a shared Zustand cart store.",
+      "Built Education/LMS flows — instructor course management and live classes via VideoSDK — reusing shared academy components across the workspace.",
+      "Consumed a centralized Express BFF that proxies the Laravel API and manages encrypted, httpOnly session cookies for silent single sign-on across every subdomain.",
+    ],
+    links: [
+      { label: "Website", url: "https://vedicastral.in" },
+      { label: "Jyotish", url: "https://jyotish.vedicastral.in" },
+      { label: "Shop", url: "https://shop.vedicastral.in" },
+      { label: "Education", url: "https://education.vedicastral.in" },
+    ],
+    aiAssisted: true,
+  },
+  {
     name: "MYWMS",
     subtitle: "Warehouse & Supply Chain Management SaaS",
     period: "2025 – Present",
@@ -111,7 +145,8 @@ export const projects = [
       "Built 40+ REST API endpoints and automated background tasks via scheduled CRON jobs.",
       "Implemented multi-tenant isolation, subscription models, and multi-layered RBAC for admins, buyers, and suppliers.",
     ],
-    link: "",
+    links: [],
+    aiAssisted: false,
   },
   {
     name: "TMG 180",
@@ -124,19 +159,21 @@ export const projects = [
       "Advanced state management and server-state caching with Redux and TanStack Query.",
       "Complex, scalable forms with React Hook Form and fully responsive, accessible UI with Tailwind CSS.",
     ],
-    link: "",
+    links: [],
+    aiAssisted: false,
   },
   {
     name: "Desi Couplez",
     subtitle: "Real-time Social Platform",
     period: "2025 – 2026",
-    role: "Full Stack Developer",
-    tech: ["React", "Socket.io", "VideoSDK"],
+    role: "Associate Frontend Developer",
+    tech: ["React", "Socket.io", "VideoSDK", "React Router v7"],
     points: [
       "Integrated video/audio calling and live streaming using Video SDK, managing session lifecycles and token auth.",
       "Built live bi-directional chat with instant delivery and presence indicators using WebSockets (Socket.io).",
     ],
-    link: "",
+    links: [],
+    aiAssisted: false,
   },
 ] as const;
 

@@ -49,3 +49,20 @@ export function ArrowIcon({ className = "size-4" }: IconProps) {
     </svg>
   );
 }
+
+export function ExternalLinkIcon({ className = "size-3.5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className} aria-hidden="true">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <path d="M15 3h6v6M10 14 21 3" />
+    </svg>
+  );
+}
+
+export function SparkleIcon({ className = "size-3.5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 2c.3 3.3 1 5.6 2.2 6.8S17.7 10.7 21 11c-3.3.3-5.6 1-6.8 2.2S12.3 16.7 12 20c-.3-3.3-1-5.6-2.2-6.8S6.3 11.3 3 11c3.3-.3 5.6-1 6.8-2.2S11.7 5.3 12 2Z" />
+    </svg>
+  );
+}
