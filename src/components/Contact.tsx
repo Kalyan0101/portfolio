@@ -3,6 +3,7 @@ import { profile } from "../data/portfolio";
 import Reveal from "./Reveal";
 import Section from "./Section";
 import {
+  DocIcon,
   GitHubIcon,
   LinkedInIcon,
   MailIcon,
@@ -23,23 +24,44 @@ export default function Contact() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <motion.a
-            href={`mailto:${profile.email}`}
-            whileHover={{ scale: 1.06 }}
-            whileTap={{ scale: 0.96 }}
-            className="relative mt-8 inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-accent to-accent-alt px-8 py-3 font-semibold text-surface shadow-lg shadow-accent/25"
-          >
-            {/* soft pulsing halo */}
-            <motion.span
-              aria-hidden="true"
-              className="absolute inset-0 rounded-lg bg-accent/40 blur-md"
-              animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.06, 1] }}
-              transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <span className="relative flex items-center gap-2">
-              <MailIcon className="size-5" /> Say Hello
-            </span>
-          </motion.a>
+          <div className="flex items-center justify-center gap-5">
+            <motion.a
+              href={`mailto:${profile.email}`}
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.96 }}
+              className="relative mt-8 inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-accent to-accent-alt px-8 py-3 font-semibold text-surface shadow-lg shadow-accent/25"
+            >
+              {/* soft pulsing halo */}
+              <motion.span
+                aria-hidden="true"
+                className="absolute inset-0 rounded-lg bg-accent/40 blur-md"
+                animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.06, 1] }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <span className="relative flex items-center gap-2">
+                <MailIcon className="size-5" /> Say Hello
+              </span>
+            </motion.a>
+
+            <motion.a
+              href="https://drive.google.com/file/d/19SaUONW1YOg4EqB9QN0rdEAT1vbGK4E4/view?usp=drive_link"
+              target="_blank"
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.96 }}
+              className="relative mt-8 inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-accent to-accent-alt px-8 py-3 font-semibold text-surface shadow-lg shadow-accent/25"
+            >
+              {/* soft pulsing halo */}
+              <motion.span
+                aria-hidden="true"
+                className="absolute inset-0 rounded-lg bg-accent/40 blur-md"
+                animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.06, 1] }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <span className="relative flex items-center gap-2">
+                <DocIcon className="size-5" /> Resume
+              </span>
+            </motion.a>
+          </div>
         </Reveal>
 
         <Reveal delay={0.25}>
