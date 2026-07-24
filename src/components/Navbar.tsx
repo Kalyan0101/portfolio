@@ -76,7 +76,7 @@ export default function Navbar() {
             type="button"
             className="rounded-lg bg-linear-to-r from-accent to-accent-alt px-2 lg:px-6 py-2 text-xs lg:text-sm font-semibold text-surface shadow-lg shadow-accent/25 cursor-pointer"
             onClick={() => {
-              window.open("https://drive.google.com/file/d/19SaUONW1YOg4EqB9QN0rdEAT1vbGK4E4/view?usp=drive_link", "_blank")
+              window.open("./Kalyan_Naskar.pdf", "_blank")
             }}
           >
             View Resume

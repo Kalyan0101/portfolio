@@ -44,7 +44,8 @@ export default function Contact() {
             </motion.a>
 
             <motion.a
-              href="https://drive.google.com/file/d/19SaUONW1YOg4EqB9QN0rdEAT1vbGK4E4/view?usp=drive_link"
+              // href="https://drive.google.com/file/d/19SaUONW1YOg4EqB9QN0rdEAT1vbGK4E4/view?usp=drive_link"
+              href="./Kalyan_Naskar.pdf"
               target="_blank"
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.96 }}
