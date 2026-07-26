@@ -24,9 +24,9 @@ export default function Skills() {
                   show: { transition: { staggerChildren: 0.05 } },
                 }}
               >
-                {group.items.map((skill) => (
+                {group.items.map(({ label, Icon }) => (
                   <motion.li
-                    key={skill}
+                    key={label}
                     variants={{
                       hidden: { opacity: 0, scale: 0.6 },
                       show: { opacity: 1, scale: 1 },
@@ -35,9 +35,10 @@ export default function Skills() {
                       scale: 1.12,
                       backgroundColor: "rgba(16, 185, 129, 0.15)",
                     }}
-                    className="cursor-default rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs text-accent-soft"
+                    className="flex cursor-default items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs text-accent-soft"
                   >
-                    {skill}
+                    <Icon aria-hidden className="text-sm" />
+                    {label}
                   </motion.li>
                 ))}
               </motion.ul>

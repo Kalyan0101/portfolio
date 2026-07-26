@@ -1,13 +1,15 @@
 import { animate, useInView } from "motion/react";
 import { useEffect, useRef } from "react";
-import { profile } from "../data/portfolio";
+import { profile, skills } from "../data/portfolio";
 import Reveal from "./Reveal";
 import Section from "./Section";
+
+const totalTechnologies = skills.reduce((sum, group) => sum + group.items.length, 0);
 
 const highlights = [
   { value: 1, suffix: "+", label: "Years of production experience" },
   { value: 40, suffix: "+", label: "REST API endpoints shipped" },
-  { value: 30, suffix: "%", label: "API response time reduction" },
+  { value: totalTechnologies, suffix: "+", label: "Technologies & tools" },
   { value: 4, suffix: "", label: "Production projects led" },
 ];
 

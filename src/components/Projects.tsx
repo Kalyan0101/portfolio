@@ -91,12 +91,13 @@ export default function Projects() {
               </ul>
 
               <ul className="mt-5 flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
+                {project.tech.map(({ label, Icon }) => (
                   <li
-                    key={tech}
-                    className="rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs text-accent-soft"
+                    key={label}
+                    className="flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs text-accent-soft"
                   >
-                    {tech}
+                    <Icon aria-hidden className="text-sm" />
+                    {label}
                   </li>
                 ))}
               </ul>
