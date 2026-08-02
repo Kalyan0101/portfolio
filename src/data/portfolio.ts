@@ -110,7 +110,7 @@ export const skills = [
 export const experience = [
   {
     company: "Code Of Dolphins",
-    role: "Software Engineer (Node.js Developer)",
+    role: "Software Engineer (Full Stack Developer)",
     period: "July 2025 – Present",
     location: "Kolkata, India",
     points: [
